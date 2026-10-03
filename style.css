@@ -1,0 +1,274 @@
+:root {
+  --green: #0E8F6F;
+  --green-dark: #0A6E55;
+  --green-tint: #E3F2EC;
+  --ink: #1D2A26;
+  --muted: #5B6B66;
+  --line: #D5E2DC;
+  --bg: #F7FAF8;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Poppins", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 20px 24px;
+}
+
+h1, h2 { line-height: 1.2; margin: 0; }
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--green-dark);
+  max-width: 16ch;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 16px 0 0;
+}
+
+section { margin-top: 56px; }
+
+/* Tracker */
+.tracker {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+
+.tracker-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.summary {
+  margin: 0;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.hint {
+  margin: 8px 0 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 4px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+thead th {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td { border-bottom: 0; }
+
+.habit-col,
+tbody th {
+  text-align: left;
+  padding-right: 12px;
+}
+
+tbody th {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.goal {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.day {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--white);
+  color: transparent;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.day[aria-pressed="true"] {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .day:hover { border-color: var(--green); }
+  .day[aria-pressed="true"]:hover { background: var(--green-dark); border-color: var(--green-dark); }
+}
+
+.day:focus-visible,
+.reset:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--green-dark);
+  outline-offset: 2px;
+}
+
+.count {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.count.met {
+  color: var(--green-dark);
+  background: var(--green-tint);
+  border-radius: 8px;
+}
+
+.reset {
+  margin-top: 20px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .reset:hover { color: var(--ink); border-color: var(--muted); }
+}
+
+/* Why */
+dl { margin: 20px 0 0; }
+
+dl > div {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+dt {
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+dd {
+  margin: 4px 0 0;
+  max-width: 64ch;
+}
+
+.note {
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+/* CTA */
+.cta {
+  background: var(--green-dark);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 32px 24px;
+}
+
+.cta p {
+  max-width: 56ch;
+  margin: 12px 0 24px;
+  color: #D6EFE6;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--green-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover { background: var(--green-tint); }
+}
+
+.cta .button:focus-visible { outline-color: var(--white); }
+
+/* Footer */
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer p { margin: 0 0 6px; }
+
+@media (max-width: 600px) {
+  main { padding-top: 40px; }
+  h1 { font-size: 32px; }
+  .lead { font-size: 17px; }
+  .tracker, .cta { padding: 24px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* Keep the habit names visible while scrolling the days on small screens */
+.habit-col,
+tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--white);
+  min-width: 150px;
+}
