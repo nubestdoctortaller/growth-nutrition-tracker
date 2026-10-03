@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekly Growth Nutrition Tracker for Kids and Teens</title>
+  <meta name="description" content="A simple weekly tracker for parents covering the food habits that support healthy growth in kids and teens: protein, calcium, vitamin C, fish, iron, and zinc.">
+  <meta property="og:title" content="Weekly Growth Nutrition Tracker for Kids and Teens">
+  <meta property="og:description" content="Tick off five everyday food habits that support healthy growth, and see where the gaps are.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <h1>A weekly food tracker for growing kids</h1>
+      <p class="lead">Genetics sets about 80% of adult height. Everyday nutrition helps kids reach the height their genes allow. Mark each habit as it happens this week and see where the gaps are.</p>
+    </header>
+
+    <section class="tracker" aria-labelledby="tracker-title">
+      <div class="tracker-head">
+        <h2 id="tracker-title">This week</h2>
+        <p id="summary" class="summary" aria-live="polite"></p>
+      </div>
+      <p class="hint">Tap a day to mark it done. Checks are saved on this device and clear automatically each Monday.</p>
+
+      <div class="table-wrap">
+        <table id="tracker">
+          <thead>
+            <tr>
+              <th scope="col" class="habit-col">Habit</th>
+              <th scope="col">Mon</th>
+              <th scope="col">Tue</th>
+              <th scope="col">Wed</th>
+              <th scope="col">Thu</th>
+              <th scope="col">Fri</th>
+              <th scope="col">Sat</th>
+              <th scope="col">Sun</th>
+              <th scope="col">Done</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <noscript><p class="hint">Turn on JavaScript to use the tracker. The habits are listed below.</p></noscript>
+
+      <button type="button" id="reset" class="reset">Clear this week</button>
+    </section>
+
+    <section class="why" aria-labelledby="why-title">
+      <h2 id="why-title">Why these five habits</h2>
+      <dl>
+        <div>
+          <dt>Protein at every meal</dt>
+          <dd>Protein supplies the building blocks for bone and muscle, and supports IGF-1, a hormone tied to bone growth. Try eggs, chicken, Greek yogurt, beans, or tofu.</dd>
+        </div>
+        <div>
+          <dt>Two or three calcium foods a day</dt>
+          <dd>Calcium is the mineral bones are built from, and needs rise from around age 9 through the teen years. Milk, cheese, yogurt, fortified plant milks, and sardines all count.</dd>
+        </div>
+        <div>
+          <dt>A vitamin C fruit or vegetable every day</dt>
+          <dd>Vitamin C helps the body build collagen and absorb iron from plant foods. Bell peppers, broccoli, oranges, and strawberries are easy picks.</dd>
+        </div>
+        <div>
+          <dt>Fish twice a week</dt>
+          <dd>Salmon, sardines, and mackerel provide vitamin D, which the body needs to absorb calcium, plus omega-3s linked to healthy bone mineralization.</dd>
+        </div>
+        <div>
+          <dt>Iron and zinc foods three times a week</dt>
+          <dd>Iron carries oxygen to growing tissue and zinc supports cell growth. Lean beef, lentils, chickpeas, and pumpkin seeds cover both.</dd>
+        </div>
+      </dl>
+      <p class="note">Food works alongside the other basics of growth: enough sleep and daily physical activity.</p>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <h2 id="cta-title">Want the full details?</h2>
+      <p>The complete guide covers daily targets by age, food-by-food serving sizes, vegetarian options, and a simple daily meal pattern.</p>
+      <a class="button" href="https://doctortaller.com/blogs/nutritions/foods-that-make-you-taller">Read the full guide on Doctor Taller</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>This content is for general educational purposes. Talk with your child's pediatrician about specific nutrition or growth concerns.</p>
+    <p>&copy; Doctor Taller</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
